@@ -25,8 +25,8 @@ namespace TrashCollector2._0.Controllers
         //GET: COLLECTOR/VIEWDAY
         public ActionResult ViewDay()
         {
-            var address = db.Address.ToList();
-            return View(address);
+            var user = db.Users.ToList();
+            return View(user);
         }
     }
 }

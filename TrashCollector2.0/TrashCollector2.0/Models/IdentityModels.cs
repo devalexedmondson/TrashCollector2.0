@@ -17,19 +17,17 @@ namespace TrashCollector2._0.Models
             // Add custom user claims here
             return userIdentity;
         }
-        public Address Address { get; set; }
-        [ForeignKey("Address")]
-        public int AddressId { get; set; }
+       
+        public string Address { get; set; } 
 
         public PickUpOption PickUpOption { get; set; }
         [ForeignKey("PickUpOption")]
-        public int PickUpOptionId { get; set; }
+        public int? PickUpOptionId { get; set; }
 
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Address> Address { get; set; }
         public DbSet<PickUpOption> PickUpOption { get; set; }
 
         public ApplicationDbContext()

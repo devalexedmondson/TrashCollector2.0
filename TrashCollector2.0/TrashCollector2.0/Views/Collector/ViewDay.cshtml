@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TrashCollector2._0.Models.Address>
+﻿@model IEnumerable<TrashCollector2._0.Models.ApplicationUser>
 @{
     ViewBag.Title = "ViewDay";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,6 +13,36 @@
 else
 {
     <table class="table table-bordered table-hover" style="margin-top: 20px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PickUpOptionId)
+            </th>
+        </tr>
+        @foreach (var customer in Model)
+        {
+            if (customer.Address != null)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => customer.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => customer.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => customer.PickUpOptionId)
+                    </td>
+                </tr>
+            }
+
+
+        }
 
     </table>
 }

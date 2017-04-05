@@ -207,9 +207,28 @@
     <Compile Include="Migrations\201703301605125_Adding all models and FK.Designer.cs">
       <DependentUpon>201703301605125_Adding all models and FK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703302113553_made FK nullable.cs" />
+    <Compile Include="Migrations\201703302113553_made FK nullable.Designer.cs">
+      <DependentUpon>201703302113553_made FK nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703302224326_undid nullable types on actual Pick up and Address table.cs" />
+    <Compile Include="Migrations\201703302224326_undid nullable types on actual Pick up and Address table.Designer.cs">
+      <DependentUpon>201703302224326_undid nullable types on actual Pick up and Address table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704031956295_deleted Address FK.cs" />
+    <Compile Include="Migrations\201704031956295_deleted Address FK.Designer.cs">
+      <DependentUpon>201704031956295_deleted Address FK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704032007504_Added address to AppUser table.cs" />
+    <Compile Include="Migrations\201704032007504_Added address to AppUser table.Designer.cs">
+      <DependentUpon>201704032007504_Added address to AppUser table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704032018140_Deleted Address Table.cs" />
+    <Compile Include="Migrations\201704032018140_Deleted Address Table.Designer.cs">
+      <DependentUpon>201704032018140_Deleted Address Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\CollectorViewModels.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -279,10 +298,14 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Collector\ViewDay.cshtml" />
+    <Content Include="Views\Customer\CustomerIndex.cshtml" />
+    <Content Include="Views\Customer\ChangeDay.cshtml" />
+    <Content Include="Views\Customer\VacationDay.cshtml" />
+    <Content Include="Views\Collector\CollectorIndex.cshtml" />
+    <Content Include="Views\Customer\AddAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -295,6 +318,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703301605125_Adding all models and FK.resx">
       <DependentUpon>201703301605125_Adding all models and FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302113553_made FK nullable.resx">
+      <DependentUpon>201703302113553_made FK nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302224326_undid nullable types on actual Pick up and Address table.resx">
+      <DependentUpon>201703302224326_undid nullable types on actual Pick up and Address table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704031956295_deleted Address FK.resx">
+      <DependentUpon>201704031956295_deleted Address FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704032007504_Added address to AppUser table.resx">
+      <DependentUpon>201704032007504_Added address to AppUser table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704032018140_Deleted Address Table.resx">
+      <DependentUpon>201704032018140_Deleted Address Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

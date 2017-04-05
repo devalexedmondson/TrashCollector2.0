@@ -1,0 +1,52 @@
+﻿@model TrashCollector2._0.Models.ApplicationUser
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CustomerIndex</h2>
+
+<div class="jumbotron">
+    <h1>Trash Collector 2.0</h1>
+    <p class="lead">Welcome to the new and improved Trash Collector</p>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>Your Current Address</h2>
+        @if (Model.Address.Any())
+        {
+            <p>
+                Current Address: @Model.Address
+            </p>
+        }
+
+        else
+        {
+        @Html.ActionLink("Add Address", "AddAddress", "Customer", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Your Options</h2>
+        @if (Model.PickUpOptionId.HasValue == true)
+        {
+            <p>
+                @* Need to display actual day *@
+                Your current Pick Up Day: @Model.PickUpOptionId.Value
+            </p>
+        }
+        else
+        {
+            <p>
+                You haven't selected a pick up day yet.
+            </p>
+            @Html.ActionLink("Select Day", "ChangeDay", "Customer", routeValues: null, htmlAttributes: new { id = "loginLink" })
+
+        }
+    </div>
+    <div class="col-md-4">
+       <h2>You owe:</h2>
+        <p>$0</p>
+    </div>
+</div>
+
